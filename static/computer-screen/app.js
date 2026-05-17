@@ -1044,6 +1044,7 @@
             playStartupSound();
             if (shell.classList.contains('hidden')) enterShell();
         }
+        if (event.data.type === 'computerLeave') resetIntro();
         if (event.data.type === 'navigate' && event.data.hash) {
             navigate(event.data.hash);
         }

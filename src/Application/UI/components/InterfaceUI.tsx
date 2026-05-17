@@ -5,6 +5,7 @@ import AgentGameControls from './AgentGameControls';
 import GameHelpModal from './GameHelpModal';
 import InfoOverlay from './InfoOverlay';
 import JournalPanel from './JournalPanel';
+import MonitorExitHint from './MonitorExitHint';
 import {
     fetchJournalProgress,
     fetchJournalUser,
@@ -221,8 +222,12 @@ const InterfaceUI: React.FC<InterfaceUIProps> = ({}) => {
         return <></>;
     }
 
+    const showMonitorExitHint =
+        inMonitor && !journalOpen && !helpOpen;
+
     return (
         <>
+            {showMonitorExitHint && <MonitorExitHint />}
             <motion.div
                 initial="hide"
                 variants={vars}
