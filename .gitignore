@@ -1,0 +1,13 @@
+node_modules
+package-lock.json
+.DS_Store
+*.psd
+.env
+
+public/
+
+# Runtime data (created on the server; do not commit local dev accounts)
+server/data/users.json
+server/data/sessions.json
+server/data/journalProgress.json
+server/data/uploads/

@@ -1,0 +1,26 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+# Connect this repo in Render → New → Blueprint → apply this file.
+#
+# Optional persistence: add a Persistent Disk mounted at /var/data, then set:
+#   DATA_DIR=/var/data
+
+services:
+  - type: web
+    name: portfolio-website
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server/index.ts
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: RENDER
+        value: 'true'
+      # Optional — contact form SMTP:
+      # - key: CONTACT_SMTP_USER
+      #   sync: false
+      # - key: CONTACT_SMTP_PASS
+      #   sync: false
+      # - key: CONTACT_TO
+      #   sync: false

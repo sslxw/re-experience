@@ -1,0 +1,28 @@
+{
+  "comments": [
+    {
+      "id": "comment-001",
+      "postId": "post-001",
+      "name": "Barry B.",
+      "email": "barry@stars.local",
+      "body": "I found something in the library. Do not go alone.",
+      "createdAt": "1998-07-25T08:00:00.000Z"
+    },
+    {
+      "id": "comment-002",
+      "postId": "post-002",
+      "name": "Rebecca C.",
+      "email": "rebecca@stars.local",
+      "body": "T-Virus replication curve matches the Arklay data. Burn the samples.",
+      "createdAt": "1998-07-25T10:30:00.000Z"
+    },
+    {
+      "id": "comment-003",
+      "postId": "post-004",
+      "name": "Ada W.",
+      "email": "ada@unknown.net",
+      "body": "NEST access cards are useless after the flood. Find another route.",
+      "createdAt": "1998-07-26T12:00:00.000Z"
+    }
+  ]
+}

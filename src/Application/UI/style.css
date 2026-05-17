@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #c8d0c8;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        font-size: 10px;
+    }
+}
+
+br {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 16px;
+}
+
+.loading::after {
+    display: inline-block;
+    animation: dotty steps(1, end) 1s infinite;
+    content: '';
+}
+
+@keyframes dotty {
+    0% {
+        content: '   ';
+    }
+    25% {
+        content: '. ';
+    }
+    50% {
+        content: '.. ';
+    }
+    75% {
+        content: '...';
+    }
+    100% {
+        content: '   ';
+    }
+}
+
+.blinking-cursor {
+    background-color: #4ade80;
+    width: 0.8em;
+    height: 0.15em;
+    animation: 0.65s blink step-end infinite;
+}
+
+@keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #4ade80;
+    }
+}
+
+.bios-start-button {
+    background-color: #0a0a0a;
+    border: 3px solid #dc2626;
+    border-width: 3px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.bios-start-button p {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    color: #ef4444;
+    letter-spacing: 0.2em;
+}
+
+.bios-start-button:hover p {
+    background-color: #dc2626;
+    cursor: pointer;
+    color: #0a0a0a;
+}
+
+.loading-screen-header {
+    padding: 48px;
+}
+
+.loading-screen-body {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.loading-screen-footer {
+    padding: 48px;
+    padding-bottom: 64px;
+}
+
+.info-wrapper {
+    top: 64px;
+    left: 64px;
+}
+
+#ui {
+    text-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 768px) {
+    .loading-screen-header {
+        padding: 16px;
+    }
+
+    .info-wrapper {
+        top: 16px;
+        left: 16px;
+    }
+
+    .blinking-cursor {
+        width: 0.4em;
+        height: 0.08em;
+    }
+
+    .loading-screen-body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .loading-screen-footer {
+        padding: 16px;
+        padding-bottom: 32px;
+    }
+}
