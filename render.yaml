@@ -6,7 +6,7 @@
 
 services:
   - type: web
-    name: portfolio-website
+    name: re-experience
     runtime: node
     plan: free
     buildCommand: npm install --include=dev && npm run build
