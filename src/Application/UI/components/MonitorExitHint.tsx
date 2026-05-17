@@ -12,7 +12,6 @@ const MonitorExitHint: React.FC = () => {
             aria-live="polite"
         >
             <p style={styles.hint}>ESC — leave terminal</p>
-            <p style={styles.sub}>Returns to Umbrella secure boot</p>
         </motion.div>
     );
 };
@@ -32,12 +31,6 @@ const styles: StyleSheetCSS = {
         color: 'rgba(200, 200, 200, 0.75)',
         fontSize: 13,
         letterSpacing: '0.12em',
-    },
-    sub: {
-        margin: '6px 0 0',
-        color: 'rgba(74, 222, 128, 0.45)',
-        fontSize: 10,
-        letterSpacing: '0.08em',
     },
 };
 

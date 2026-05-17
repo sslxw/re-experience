@@ -979,6 +979,7 @@
     }
 
     function enterShell() {
+        playStartupSound();
         intro.classList.add('hidden');
         shell.classList.remove('hidden');
         setArchiveGameToolsVisible(true);
@@ -1040,10 +1041,7 @@
             handleJournalBridgeRequest(event);
             return;
         }
-        if (event.data.type === 'computerEnter') {
-            playStartupSound();
-            if (shell.classList.contains('hidden')) enterShell();
-        }
+        // computerEnter: focus only — user must click "Access File System" (enterShell)
         if (event.data.type === 'computerLeave') resetIntro();
         if (event.data.type === 'navigate' && event.data.hash) {
             navigate(event.data.hash);
